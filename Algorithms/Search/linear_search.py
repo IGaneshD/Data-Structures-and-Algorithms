@@ -6,8 +6,6 @@
 
 # Input: arr -> List or Tuple(or Any ArrayLike)
 
-import traceback
-
 class ElementNotFoundError(BaseException):
     pass
 
