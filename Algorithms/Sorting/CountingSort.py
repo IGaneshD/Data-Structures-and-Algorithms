@@ -23,38 +23,22 @@ class Solution:
         for i in range(1,len(countArray)):
             countArray[i] += countArray[i-1]
 
-        print(f"{countArray=}")
-        # for i in range(len(countArray)):
-        #     for j in range(countArray[i-1], countArray[i]):
-        #         arr[j] = i
+        # print(f"{countArray=}")
 
-        # tempArray = [0]*size
-        # i = 0
-        # while i < size:
-        #     tempArray[countArray[arr[i]]-1] = arr[i]
-        #     countArray[arr[i]] -= 1
-        #     i += 1
+        tempArray = [0]*size
+        i = 0
+        while i < size:
+            tempArray[countArray[arr[i]]-1] = arr[i]
+            countArray[arr[i]] -= 1
+            i += 1
         
-        # print(tempArray)
+        arr = tempArray
 
-        for i in range(len(countArray)):
-            if i != 0:
-                self.fill(arr, countArray[i-1], countArray[i], i)
-            else:
-                self.fill(arr, 0, countArray[i], i)
-        
-        print(f"{arr=}")
-
-    def fill(self, arr, start, end, element):
-        
-        for i in range(start, end):
-            arr[i] = element
-
-
+        return arr
 
 
 arr = [0,0,3,3,3,1,1,1,1,5,0,5,5,5,6,6,6,6]
 
 obj = Solution()
 
-obj.sort(arr)
+print(obj.sort(arr))
