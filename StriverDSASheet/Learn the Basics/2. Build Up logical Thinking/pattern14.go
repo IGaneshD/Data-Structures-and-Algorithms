@@ -11,8 +11,8 @@ func main(){
 
 	fmt.Scanf("%c", &endCharacter)
 
-	for  i  := 0; i<= int(endCharacter) - 65; i++ {
-		for j := 65; j<=65+i; j++{
+	for  i  := 65; i<= int(endCharacter); i++ {
+		for j := 65; j<=i; j++{
 			fmt.Printf("%c", j)
 		}
 		fmt.Println()
